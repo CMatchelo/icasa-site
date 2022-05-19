@@ -1,0 +1,43 @@
+.menu {
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+
+.menu li {
+    position: relative;
+    width: 19%;
+    float: left;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 1px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: rgb(0, 160, 0);;
+    padding: 5px 0;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: rgb(0, 65, 0);
+    display: none;
+    z-index: 999;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+    width: 150px;
+    margin-left: -15%;
+}
