@@ -3,7 +3,6 @@ import './styles.css'
 import escudo from '../../img/escudo.png';
 
 function MatchCard(match) {
-
     return (
         <div className="matchCard">
             <div className="occasionField">
@@ -27,7 +26,7 @@ function MatchCard(match) {
 
             </div>
             <div className="localField">
-                <span>{match.local}</span>
+                <span>{match.local} - {match.stadium}</span>
             </div>
         </div>
     )
