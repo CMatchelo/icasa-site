@@ -1,4 +1,4 @@
-const Match = (local, adv, date, hour, resultH, resultA, badge, stadium, occasion) => {
+const Match = (local, adv, date, hour, resultH, resultA, badge, stadium, champ, round) => {
     return {
       local: local,
       adv: adv,
@@ -8,7 +8,8 @@ const Match = (local, adv, date, hour, resultH, resultA, badge, stadium, occasio
       resultA: resultA,
       badge: badge,
       stadium: stadium,
-      occasion: occasion,
+      champ: champ,
+      round: round
     }
   }
 

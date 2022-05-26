@@ -1,12 +1,12 @@
 import React from "react";
 import './styles.css'
-import escudo from '../../img/escudo.png';
+import escudo from '../../img/escudo2.png';
 
 function MatchCard(match) {
     return (
         <div className="matchCard">
             <div className="occasionField">
-                <span>{match.occasion}</span>
+                <span>{match.champ} - {match.round}</span>
             </div>
             <div className="matchField">
                 <div className="resultField">

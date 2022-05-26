@@ -9,7 +9,7 @@ import { collection, doc, getDocs } from "firebase/firestore"
 
 function MatchsCaroussel() {
   const [matchsArr, setMatchs] = useState([]);
-  //var matchsArr = [];
+  const test = [];
   const matchsCollectionRef = collection(db, "matchs");
   const responsive = {
     0: { items: 2 },
@@ -17,56 +17,66 @@ function MatchsCaroussel() {
     1024: { items: 4 },
   };
 
-  useEffect (() => {
+  useEffect(() => {
     const getMatchs = async () => {
       const data = await getDocs(matchsCollectionRef);
-      setMatchs(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+      setMatchs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
     getMatchs();
   }, [])
 
   const matchOne = Match(
     'Juazeiro do Norte',
-    'Sousa',
-    '15/05/2022',
+    'America-RN',
+    '28/05/2022',
     '17h',
-    '2',
-    '2',
+    '-',
+    '-',
     'https://s.glbimg.com/es/sde/f/organizacoes/2012/01/12/sousa_65.png',
     'Romeirão',
-    'Série D - Rodada 5',
+    'Série D' ,
+    'Rodada 7',
   )
   const matchTwo = Match(
     'Recife',
     'Retro',
     '21/05/2022',
     '16h',
-    '-',
-    '-',
+    '0',
+    '3',
     'https://s.glbimg.com/es/sde/f/organizacoes/2019/07/23/retro_65.png',
     'Arena Pernambuco',
-    'Série D - Rodada 6',
+    'Série D' ,
+    'Rodada 6',
   )
   /*
-  matchsArr.push(<MatchCard {...matchOne} />);
+  test.push(<MatchCard {...matchOne} />);
   var qtde = 9;
   for (var i = 1; i <= qtde; i++) {
-    matchsArr.push(<MatchCard {...matchTwo} />);
-  }*/
-  matchsArr.push(<MatchCard {...matchOne} />);
-  matchsArr.push(<MatchCard {...matchTwo} />);
-  console.log(matchsArr)
+    test.push(<MatchCard {...matchTwo} />);
+  }
+*/
+matchsArr.forEach(function(number) {
+  const match = number;
+  test.push(<MatchCard {...match} />);
+});
+  test.push(<MatchCard {...matchOne} />);
+  test.push(<MatchCard {...matchTwo} />);
+  test.push(<MatchCard {...matchTwo} />);
+  test.push(<MatchCard {...matchTwo} />);
+  test.push(<MatchCard {...matchTwo} />);
+  test.push(<MatchCard {...matchTwo} />);
+
   return (
     <div>
-    {matchsArr.map((match) => (
-      <AliceCarousel
-        mouseTracking
-        items={alert(match.local)}
-        responsive={responsive}
-        disableDotsControls={true}
-        disableButtonsControls={true}
-      />
-    ))}
+        <AliceCarousel
+          mouseTracking
+          items={test}
+          responsive={responsive}
+          disableDotsControls={true}
+          disableButtonsControls={true}
+          activeIndex={2}
+        />
     </div>
   )
 }

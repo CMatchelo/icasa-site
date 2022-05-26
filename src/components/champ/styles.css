@@ -1,0 +1,31 @@
+.champs {
+    width: 80%;
+}
+
+.champTable {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid rgb(0, 65, 0);
+    box-shadow: 0px 0px 25px rgb(0, 65, 0);
+    ;
+}
+
+.topTable,
+.bodyTable {
+    display: flex;
+}
+
+.topTable {
+    color: #fff;
+    background-color: rgb(0, 65, 0);
+}
+
+.teamName {
+    flex: 4;
+    padding: 2px;
+}
+
+.stat {
+    flex: 1;
+    padding: 2px;
+}
