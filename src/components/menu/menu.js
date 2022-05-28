@@ -6,13 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Menu() {
 
-
+    var currentScreen = "matchAndChamp";
     /*const updateGame = async (id, rate) => {
         const userDoc = doc(db, "games", id)
         const newFields = { rate: rate + 1 }
         await updateDoc(userDoc, newFields)
     }*/
-
+    function changeStyle(newScreen) {
+        document.getElementById(currentScreen).style.display = "none";
+        document.getElementById(newScreen).style.display = "flex";
+        currentScreen = newScreen;
+    };
 
     return (
         <div className="menuArea">
@@ -24,22 +28,24 @@ function Menu() {
             <div className='bottomMenu'>
                 <nav>
                     <ul class="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Elenco</a></li>
-                        <li><a href="#">Campeonatos</a>
-                            <ul>
-                                <li><a href="#">Cearense 2022</a></li>
-                                <li><a href="#">Copa do Brasil 2022</a></li>
-                                <li><a href="#">Série D 2022</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">História</a></li>
-                        <li><a href="#">Arena Romeirão</a></li>
+                        <li><a href="#" onClick={() => changeStyle("matchAndChamp")}>Home</a></li>
+                        <li><a href="#" onClick={() => changeStyle("squadScreen")}>Elenco</a></li>
+                        <li><a href="#" onClick={() => changeStyle("champsScreen")}>Campeonatos</a></li>
+                        <li><a href="#" onClick={() => changeStyle("calendarScreen")}>Calendário</a></li>
+                        <li><a href="#" onClick={() => changeStyle("newMatch")}>New Match</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     )
 }
+
+/*
+                            <ul>
+                                <li><a href="#">Cearense 2022</a></li>
+                                <li><a href="#">Copa do Brasil 2022</a></li>
+                                <li><a href="#">Série D 2022</a></li>
+                            </ul>
+*/
 
 export default Menu;
