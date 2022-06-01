@@ -52,5 +52,11 @@
     font-size: 12px;
 }
 
+@media only screen and (max-width: 600px) {
+    .matchCard {
+      padding: 13px 0;
+    }
+  }
+  
 
 

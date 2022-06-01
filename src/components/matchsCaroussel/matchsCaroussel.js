@@ -25,47 +25,41 @@ function MatchsCaroussel() {
     getMatchs();
   }, [])
 
-  const matchOne = Match(
-    'Juazeiro do Norte',
-    'America-RN',
-    '28/05/2022',
-    '17h',
-    '-',
-    '-',
-    'https://s.glbimg.com/es/sde/f/organizacoes/2012/01/12/sousa_65.png',
-    'Romeirão',
-    'Série D' ,
-    'Rodada 7',
-  )
-  const matchTwo = Match(
-    'Recife',
-    'Retro',
-    '21/05/2022',
-    '16h',
-    '0',
-    '3',
-    'https://s.glbimg.com/es/sde/f/organizacoes/2019/07/23/retro_65.png',
-    'Arena Pernambuco',
-    'Série D' ,
-    'Rodada 6',
-  )
-  /*
-  test.push(<MatchCard {...matchOne} />);
-  var qtde = 9;
-  for (var i = 1; i <= qtde; i++) {
-    test.push(<MatchCard {...matchTwo} />);
-  }
-*/
-matchsArr.forEach(function(number) {
-  const match = number;
-  test.push(<MatchCard {...match} />);
-});
-  test.push(<MatchCard {...matchOne} />);
-  test.push(<MatchCard {...matchTwo} />);
-  test.push(<MatchCard {...matchTwo} />);
-  test.push(<MatchCard {...matchTwo} />);
-  test.push(<MatchCard {...matchTwo} />);
-  test.push(<MatchCard {...matchTwo} />);
+  /* const matchOne = Match(
+     'Juazeiro do Norte',
+     'America-RN',
+     '28/05/2022',
+     '17h',
+     '-',
+     '-',
+     'https://s.glbimg.com/es/sde/f/organizacoes/2012/01/12/sousa_65.png',
+     'Romeirão',
+     'Série D' ,
+     'Rodada 7',
+   )
+   const matchTwo = Match(
+     'Recife',
+     'Retro',
+     '21/05/2022',
+     '16h',
+     '0',
+     '3',
+     'https://s.glbimg.com/es/sde/f/organizacoes/2019/07/23/retro_65.png',
+     'Arena Pernambuco',
+     'Série D' ,
+     'Rodada 6',
+   )
+   test.push(<MatchCard {...matchOne} />);
+   var qtde = 9;
+   for (var i = 1; i <= qtde; i++) {
+     test.push(<MatchCard {...matchTwo} />);
+   }
+ */
+  matchsArr.forEach(function (number) {
+    const match = number;
+    //test.push(<MatchCard {...match} />);
+    test[match.pos - 1] = <MatchCard {...match} />;
+  });
 
   return (
     <div>
@@ -75,7 +69,7 @@ matchsArr.forEach(function(number) {
           responsive={responsive}
           disableDotsControls={true}
           disableButtonsControls={true}
-          activeIndex={2}
+          activeIndex={6}
         />
     </div>
   )

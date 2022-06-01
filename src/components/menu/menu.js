@@ -32,7 +32,7 @@ function Menu() {
                         <li><a href="#" onClick={() => changeStyle("squadScreen")}>Elenco</a></li>
                         <li><a href="#" onClick={() => changeStyle("champsScreen")}>Campeonatos</a></li>
                         <li><a href="#" onClick={() => changeStyle("calendarScreen")}>Calendário</a></li>
-                        <li><a href="#" onClick={() => changeStyle("newMatch")}>New Match</a></li>
+                        { /*<li><a href="#" onClick={() => changeStyle("newMatch")}>New Match</a></li> */ }
                     </ul>
                 </nav>
             </div>

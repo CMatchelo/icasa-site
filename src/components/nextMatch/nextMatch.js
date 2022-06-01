@@ -9,6 +9,7 @@ function NextMatch() {
 
     const matchsCollectionRef = collection(db, "matchs");
     const [matchsArr, setMatchs] = useState([]);
+    var nextMatch;
 
     useEffect(() => {
         const getMatchs = async () => {
@@ -17,42 +18,38 @@ function NextMatch() {
         }
         getMatchs();
     }, [])
+    matchsArr.forEach(function (match) {
+        if (match.nextMatch === true) {
+            nextMatch = match;
+        }
+    })
+    if (nextMatch) {
+        return (
+            <div className="nextGame">
+                <div className="occasionInfo">
+                    <div className="title">
+                        <span>Próximo Jogo</span>
+                    </div>
+                </div>
 
-    const match = Match(
-        'Juazeiro do Norte',
-        'America-RN',
-        '28/05/2022',
-        '17h',
-        '-',
-        '-',
-        'https://s.glbimg.com/es/sde/f/organizacoes/2012/01/12/sousa_65.png',
-        'Romeirão',
-        'Campeonato Brasileiro Série D 2022',
-        'Rodada 6',
-    )
+                <div className="teamsInfo">
 
-    return (
-        <div className="nextGame">
-            <div className="occasionInfo">
-                <div className="title">
-                    <span>Próximo Jogo</span>
+                    <div className="champ">
+                        <span className="champSpan">{nextMatch.champ} - {nextMatch.round}</span>
+                    </div>
+                    <div className="teamsBadge">
+                        <img src={escudo} alt="star" className="nextBadge" />
+                        <img src={nextMatch.badge} className="nextAdvBadge" />
+                    </div>
+                </div>
+                <div className="matchInfo">
+                    <span> {nextMatch.date} - {nextMatch.hour} </span>
+                    <br />
+                    <span>{nextMatch.stadium} - {nextMatch.local}</span>
                 </div>
             </div>
-            <div className="teamsInfo">
-                <div className="champ">
-                    <span className="champSpan">{match.champ}</span>
-                </div>
-                <img src={escudo} alt="star" className="homeBadge" />
-                <img src={match.badge} />
-            </div>
-            <div className="matchInfo">
-                <span> {match.date} - {match.hour} </span>
-                <br />
-                <span>{match.stadium} - {match.local}</span>
-            </div>
-
-        </div>
-    )
+        )
+    }
 }
 
 export default NextMatch;

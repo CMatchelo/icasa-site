@@ -1,0 +1,95 @@
+.calendar {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.calendarTitle {
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: 6%;
+}
+
+.calendarTable {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.calendarMatch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 0;
+    position: relative;
+}
+
+.calendarMatch:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 15%;
+    height: 1px;
+    width: 70%;
+    border-bottom: 1px solid green;
+}
+
+
+.calendarInfos {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 19px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.stadium {
+    font-size: 16px;
+    font-weight: 500;
+    color: green;
+}
+
+.occasion {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.calendarTeams {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+}
+
+.calendarTeams img {
+    width: 30%;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: 600;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .calendarMatch {
+        flex-direction: column;
+    }
+    .calendarInfos, .calendarTeams {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .calendarTeams {
+        margin-top: 10px;
+    }
+}

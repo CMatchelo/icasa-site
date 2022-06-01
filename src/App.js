@@ -4,6 +4,7 @@ import MatchsCaroussel from './components/matchsCaroussel/matchsCaroussel';
 import NextMatch from './components/nextMatch/nextMatch';
 import Champ from './components/champ/champ';
 import Newmatch from './components/newMatch/newMatch';
+import Calendar from './components/calendar/calendar';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         champs
       </div>
       <div id='calendarScreen'>
-        calendar
+        <Calendar />
       </div>
       <div id='newMatch'>
         <Newmatch />

@@ -1,3 +1,17 @@
 .alice-carousel__stage {
     height: 400px;
 }
+
+.carousselField {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.arrow {
+    width: 1%;
+}
+
+.carousel {
+    flex: 94%;
+}

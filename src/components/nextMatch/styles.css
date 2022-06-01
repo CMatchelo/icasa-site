@@ -29,3 +29,18 @@
 .teamsInfo {
     margin-bottom: 20px;
 }
+
+.teamsBadge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextBadge, .nextAdvBadge {
+    width: 20%;
+    margin: 0 2%;
+}
+
+.nextAdvBadge {
+    width: 15% !important;
+}
