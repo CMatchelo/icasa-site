@@ -1,0 +1,28 @@
+.campeonatosTable {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.campeonatoBox {
+    width: 100%;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.campeonatoTitle {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 0 -20%;
+}
+
+.campeonatoSubTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: -20%;
+}
+
+.campeonatoMatch {
+    margin-left: -20%;
+}

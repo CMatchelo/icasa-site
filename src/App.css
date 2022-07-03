@@ -16,6 +16,13 @@
   justify-content: center;
 }
 
+.pageOff {
+  height: 100vh;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
 #squadScreen, #champsScreen, #calendarScreen, #newMatch {
   display: none;
 }

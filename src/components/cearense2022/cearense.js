@@ -3,9 +3,9 @@ import { db } from "../../firebase-config.js"
 import { collection, doc, getDocs, Timestamp } from "firebase/firestore"
 import './styles.css'
 
-function Champ() {
+function Cearense2022() {
 
-    const teamsCollectionRef = collection(db, "seried2022");
+    const teamsCollectionRef = collection(db, "cearense2022");
     const [teamsArr, setTeams] = useState([]);
     const realTeams = [];
     useEffect(() => {
@@ -49,4 +49,4 @@ function Champ() {
     )
 }
 
-export default Champ;
+export default Cearense2022;

@@ -69,7 +69,7 @@ function MatchsCaroussel() {
           responsive={responsive}
           disableDotsControls={true}
           disableButtonsControls={true}
-          activeIndex={6}
+          activeIndex={10}
         />
     </div>
   )
