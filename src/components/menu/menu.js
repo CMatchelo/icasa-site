@@ -23,7 +23,7 @@ function Menu() {
             <img src={escudo} alt="star" className="escudo" />
             <div className='upperMenu'>
                 <a className='linkTitle' target="_blank" href='https://www.youtube.com/channel/UCSAz7UawY-3tQ-lAKX7W-Mg'>Icasa TV <FontAwesomeIcon icon="fa-brands fa-youtube" /></a>
-                <span className='menuTitle'>O que importa é te amar</span>
+                <span className='menuTitle'>O que importa é te amar!</span>
             </div>
             <div className='bottomMenu'>
                 <nav>
